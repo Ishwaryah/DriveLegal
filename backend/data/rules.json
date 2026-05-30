@@ -1,0 +1,1054 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-04-16",
+  "rules": [
+    {
+      "rule_id": "MV_183",
+      "section": "Section 183",
+      "act": "Motor Vehicles Act 1988",
+      "title": "Driving at excessive speed",
+      "description": "Whoever drives a motor vehicle in contravention of the speed limits (over speeding) shall be punishable with fine.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [
+        {
+          "state": "DL",
+          "description": "Delhi specific speed limit enforcement and fine structure applies.",
+          "effective_date": "2024-01-01"
+        }
+      ],
+      "related_offence_codes": [
+        "SPEED_EXCESS"
+      ],
+      "penalty_ref": "MV_183_FINE"
+    },
+    {
+      "rule_id": "MV_185",
+      "section": "Section 185",
+      "act": "Motor Vehicles Act 1988",
+      "title": "Drunken driving",
+      "description": "Whoever, while driving, or attempting to drive, a motor vehicle, has in his blood, alcohol exceeding 30 mg. per 100 ml. of blood. This is the law for Drunk Driving.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DRUNK_DRIVING"
+      ],
+      "penalty_ref": "MV_185_FINE"
+    },
+    {
+      "rule_id": "MV_181",
+      "section": "Section 181",
+      "act": "Motor Vehicles Act 1988",
+      "title": "Driving without a valid license",
+      "description": "Whoever drives a motor vehicle in contravention of section 3 or section 4 (Driving without a valid driving license).",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_LICENSE"
+      ],
+      "penalty_ref": "MV_181_FINE"
+    },
+    {
+      "rule_id": "MV_184",
+      "section": "Section 184",
+      "act": "Motor Vehicles Act 1988",
+      "title": "Dangerous driving",
+      "description": "Whoever drives a motor vehicle at a speed or in a manner which is dangerous to the public, having regard to all the circumstances of the case, including the nature, condition and use of the place where the vehicle is driven and the amount of traffic which actually is at the time or which might reasonably be expected to be in the place, shall be punishable.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DANGEROUS_DRIVING",
+        "RED_LIGHT_JUMPING"
+      ],
+      "penalty_ref": "MV_184_FINE"
+    },
+    {
+      "rule_id": "MV_194D",
+      "section": "Section 194D",
+      "act": "Motor Vehicles Act 1988",
+      "title": "Not wearing protective headgear",
+      "description": "Whoever drives or causes or allows to be driven a motor cycle or pillion rider without a helmet (protective headgear) in contravention of the provisions of section 129.",
+      "applies_to": [
+        "TWO_WHEELER"
+      ],
+      "vehicle_classes": [
+        "TWO_WHEELER"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_HELMET"
+      ],
+      "penalty_ref": "MV_194D_FINE"
+    },
+    {
+      "rule_id": "MV_194E",
+      "section": "Section 194E",
+      "act": "Motor Vehicles Act 1988",
+      "title": "Failure to allow passage to emergency vehicles",
+      "description": "Failure to allow passage to emergency vehicles like ambulance, fire engine, etc.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "EMERGENCY_VEHICLE_OBSTRUCTION"
+      ],
+      "penalty_ref": "MV_194E_FINE"
+    },
+    {
+      "rule_id": "MV_184C",
+      "section": "Section 184(c)",
+      "act": "Motor Vehicles Act 1988",
+      "title": "Using handheld communication devices while driving",
+      "description": "Use of handheld communication devices (mobile phone / cell phone) while driving a motor vehicle is prohibited and punishable.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "MOBILE_PHONE"
+      ],
+      "penalty_ref": "MV_184_FINE"
+    },
+    {
+      "rule_id": "MV177",
+      "section": "Section 177",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "General Violation of Traffic Rules",
+      "description": "Violation of any rule or regulation not covered by specific sections",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "GENERAL",
+        "RULE_VIOLATION",
+        "MINOR"
+      ],
+      "penalty_ref": "MV177_FINE"
+    },
+    {
+      "rule_id": "MV177A",
+      "section": "Section 177A",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Violation of Road Regulations",
+      "description": "Disobedience of orders, rules or regulations relating to road",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "ROAD_REGULATION",
+        "DISOBEDIENCE"
+      ],
+      "penalty_ref": "MV177A_FINE"
+    },
+    {
+      "rule_id": "MV178",
+      "section": "Section 178",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Travelling Without Ticket / Fare Evasion",
+      "description": "Conductor or driver allowing travel without ticket",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "Public Transport",
+        "Bus"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "BUS",
+        "TICKET",
+        "PUBLIC_TRANSPORT",
+        "FARE"
+      ],
+      "penalty_ref": "MV178_FINE"
+    },
+    {
+      "rule_id": "MV179",
+      "section": "Section 179",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Disobeying Traffic Police Orders",
+      "description": "Failure to comply with lawful directions of a police officer",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "POLICE",
+        "DISOBEY",
+        "DIRECTION"
+      ],
+      "penalty_ref": "MV179_FINE"
+    },
+    {
+      "rule_id": "MV180",
+      "section": "Section 180",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Unauthorised Use of Vehicle Without Owner's Consent",
+      "description": "Driving a vehicle without owner's consent",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "UNAUTHORIZED",
+        "OWNER_CONSENT",
+        "THEFT_ADJACENT"
+      ],
+      "penalty_ref": "MV180_FINE"
+    },
+    {
+      "rule_id": "MV181",
+      "section": "Section 181",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving Without Valid Licence",
+      "description": "Driving a motor vehicle in a public place without a valid driving licence",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_LICENCE",
+        "NO_DL",
+        "DRIVING_LICENCE",
+        "WITHOUT_LICENCE"
+      ],
+      "penalty_ref": "MV181_FINE"
+    },
+    {
+      "rule_id": "MV182",
+      "section": "Section 182",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving With Disqualified Licence",
+      "description": "Driving a vehicle when disqualified from holding a licence",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DISQUALIFIED_LICENCE",
+        "SUSPENDED_LICENCE"
+      ],
+      "penalty_ref": "MV182_FINE"
+    },
+    {
+      "rule_id": "MV182A",
+      "section": "Section 182A",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving Modified / Altered Vehicle",
+      "description": "Altering vehicle from manufacturer specs without approval",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "MODIFIED_VEHICLE",
+        "ALTERED_VEHICLE",
+        "MODIFICATION"
+      ],
+      "penalty_ref": "MV182A_FINE"
+    },
+    {
+      "rule_id": "MV183",
+      "section": "Section 183",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Over Speeding",
+      "description": "Driving a motor vehicle at a speed exceeding the limit specified",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "LMV",
+        "HGV",
+        "MGV",
+        "Two-Wheeler"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "SPEEDING",
+        "OVER_SPEED",
+        "SPEED_LIMIT",
+        "FAST_DRIVING"
+      ],
+      "penalty_ref": "MV183_FINE"
+    },
+    {
+      "rule_id": "MV184",
+      "section": "Section 184",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Dangerous / Rash Driving",
+      "description": "Driving in a manner dangerous to the public including jumping red lights, using mobile phone, driving against traffic flow, overtaking dangerously",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DANGEROUS_DRIVING",
+        "RASH_DRIVING",
+        "RED_LIGHT_JUMP",
+        "SIGNAL_JUMP",
+        "MOBILE_PHONE",
+        "WRONG_SIDE",
+        "OVERTAKING"
+      ],
+      "penalty_ref": "MV184_FINE"
+    },
+    {
+      "rule_id": "MV185",
+      "section": "Section 185",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Drunk Driving / Driving Under Influence",
+      "description": "Driving a motor vehicle in a public place while under the influence of alcohol or drugs. BAC > 30mg/100ml blood",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DRUNK_DRIVING",
+        "DUI",
+        "ALCOHOL",
+        "DRINK_AND_DRIVE",
+        "SUBSTANCE",
+        "DRUG_DRIVING",
+        "BAC"
+      ],
+      "penalty_ref": "MV185_FINE"
+    },
+    {
+      "rule_id": "MV186",
+      "section": "Section 186",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving When Mentally or Physically Unfit",
+      "description": "Driving when mentally or physically unfit to drive",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "UNFIT",
+        "MEDICAL",
+        "PHYSICALLY_UNFIT",
+        "MENTALLY_UNFIT"
+      ],
+      "penalty_ref": "MV186_FINE"
+    },
+    {
+      "rule_id": "MV189",
+      "section": "Section 189",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Speeding / Racing on Public Roads",
+      "description": "Participating in or organising races or speed trials on public roads",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "RACING",
+        "SPEED_TRIAL",
+        "STREET_RACING",
+        "STUNT"
+      ],
+      "penalty_ref": "MV189_FINE"
+    },
+    {
+      "rule_id": "MV192",
+      "section": "Section 192",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Using Vehicle Without Registration (RC)",
+      "description": "Driving or allowing a vehicle to be used without valid Registration Certificate",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_RC",
+        "NO_REGISTRATION",
+        "UNREGISTERED_VEHICLE",
+        "REGISTRATION_CERTIFICATE"
+      ],
+      "penalty_ref": "MV192_FINE"
+    },
+    {
+      "rule_id": "MV192A",
+      "section": "Section 192A",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Using Vehicle Without Permit",
+      "description": "Using a transport vehicle without a valid permit",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "Commercial",
+        "Transport"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_PERMIT",
+        "PERMIT_VIOLATION",
+        "COMMERCIAL_VEHICLE",
+        "TRANSPORT_PERMIT"
+      ],
+      "penalty_ref": "MV192A_FINE"
+    },
+    {
+      "rule_id": "MV194",
+      "section": "Section 194",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Overloading of Vehicle",
+      "description": "Carrying passengers or goods in excess of permitted capacity",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "OVERLOADING",
+        "EXCESS_LOAD",
+        "OVERWEIGHT",
+        "CAPACITY_VIOLATION"
+      ],
+      "penalty_ref": "MV194_FINE"
+    },
+    {
+      "rule_id": "MV194A",
+      "section": "Section 194A",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Overloading of Passengers",
+      "description": "Carrying passengers in excess of permitted seating capacity",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "PASSENGER_OVERLOADING",
+        "OVERCROWDING",
+        "EXCESS_PASSENGERS"
+      ],
+      "penalty_ref": "MV194A_FINE"
+    },
+    {
+      "rule_id": "MV194B",
+      "section": "Section 194B",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Not Wearing Seat Belt",
+      "description": "Driver or passenger not wearing seat belt while the vehicle is in motion",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "LMV",
+        "Car",
+        "Four-Wheeler"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "SEAT_BELT",
+        "SEATBELT",
+        "SAFETY_BELT",
+        "NO_SEATBELT"
+      ],
+      "penalty_ref": "MV194B_FINE"
+    },
+    {
+      "rule_id": "MV194C",
+      "section": "Section 194C",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Violation of Motorcycle Safety Rules",
+      "description": "Driving motorcycle without safety equipment or violating rules specific to two-wheelers",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "Two-Wheeler",
+        "Motorcycle",
+        "Scooter"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "MOTORCYCLE",
+        "TWO-WHEELER",
+        "SAFETY_RULES",
+        "SCOOTER"
+      ],
+      "penalty_ref": "MV194C_FINE"
+    },
+    {
+      "rule_id": "MV194D",
+      "section": "Section 194D",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Not Wearing Helmet",
+      "description": "Riding a motorcycle or being a pillion rider without wearing a protective helmet",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "Two-Wheeler",
+        "Motorcycle",
+        "Scooter",
+        "Moped"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_HELMET",
+        "HELMET",
+        "TWO-WHEELER_SAFETY",
+        "PILLION"
+      ],
+      "penalty_ref": "MV194D_FINE"
+    },
+    {
+      "rule_id": "MV194E",
+      "section": "Section 194E",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Failure to Allow Passage to Emergency Vehicles",
+      "description": "Not giving way to ambulance, fire service or other emergency vehicles",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "AMBULANCE",
+        "EMERGENCY_VEHICLE",
+        "FIRE_TRUCK",
+        "NOT_GIVING_WAY"
+      ],
+      "penalty_ref": "MV194E_FINE"
+    },
+    {
+      "rule_id": "MV194F",
+      "section": "Section 194F",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Use of Mobile Phone While Driving",
+      "description": "Using a hand-held communication device (mobile phone) while driving",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "MOBILE_PHONE",
+        "PHONE_WHILE_DRIVING",
+        "DISTRACTED_DRIVING",
+        "HAND-HELD_DEVICE"
+      ],
+      "penalty_ref": "MV194F_FINE"
+    },
+    {
+      "rule_id": "MV196",
+      "section": "Section 196",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving Without Insurance",
+      "description": "Using or driving a vehicle without a valid third-party insurance policy",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_INSURANCE",
+        "UNINSURED_VEHICLE",
+        "THIRD_PARTY_INSURANCE",
+        "INSURANCE_EXPIRED"
+      ],
+      "penalty_ref": "MV196_FINE"
+    },
+    {
+      "rule_id": "MV197",
+      "section": "Section 197",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Taking Vehicle Without Authority",
+      "description": "Taking or using a vehicle without lawful authority",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "UNAUTHORIZED_USE",
+        "THEFT"
+      ],
+      "penalty_ref": "MV197_FINE"
+    },
+    {
+      "rule_id": "MV198",
+      "section": "Section 198",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Interference With Vehicle",
+      "description": "Tampering or interfering with a motor vehicle",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "TAMPERING",
+        "INTERFERENCE",
+        "VANDALISM"
+      ],
+      "penalty_ref": "MV198_FINE"
+    },
+    {
+      "rule_id": "MV199",
+      "section": "Section 199",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Offences by Juveniles / Underage Driving",
+      "description": "Motor vehicle driven by a person under 18 years of age. Guardian/owner held liable.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "UNDERAGE_DRIVING",
+        "JUVENILE",
+        "MINOR_DRIVING",
+        "BELOW_18"
+      ],
+      "penalty_ref": "MV199_FINE"
+    },
+    {
+      "rule_id": "MV206",
+      "section": "Section 206",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Failure to Produce Documents on Demand",
+      "description": "Failing to produce DL, RC, insurance, PUC or permit when demanded by an officer",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DOCUMENTS",
+        "DL",
+        "RC",
+        "INSURANCE",
+        "PUC",
+        "PRODUCE_DOCUMENTS"
+      ],
+      "penalty_ref": "MV206_FINE"
+    },
+    {
+      "rule_id": "MV210B",
+      "section": "Section 210B",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Abetment of Offences by Enforcing Authority",
+      "description": "Any enforcing authority found violating this Act shall pay twice the penalty",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "POLICE",
+        "ENFORCING_AUTHORITY",
+        "CORRUPTION"
+      ],
+      "penalty_ref": "MV210B_FINE"
+    },
+    {
+      "rule_id": "FAQ_FAQ001",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for driving without a helmet in India?",
+      "description": "Under Section 194D of the Motor Vehicles (Amendment) Act 2019, the fine for riding a two-wheeler without a helmet is \u20b91,000. Additionally, your driving licence will be disqualified for 3 months. This applies to both the rider and the pillion passenger. The helmet must be BIS-approved (IS:4151 standard). Maharashtra has reduced this to \u20b9500 while most other states follow the central \u20b91,000 fine.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ002",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for drunk driving in India?",
+      "description": "Under Section 185 of the MV Amendment Act 2019, drunk driving penalties are: First offence - Fine of \u20b910,000 and/or imprisonment up to 6 months. Second offence (within 3 years) - Fine of \u20b915,000 and/or imprisonment up to 2 years. The legal BAC (Blood Alcohol Content) limit is 30mg per 100ml of blood. The offence is non-compoundable meaning it cannot be settled on the spot and goes to court. Your licence can be suspended or cancelled.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ003",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What happens if I drive without insurance?",
+      "description": "Under Section 196 of the MV Amendment Act 2019: First offence - Fine of \u20b92,000 and/or imprisonment up to 3 months. Second offence - Fine of \u20b94,000 and/or imprisonment up to 3 months. Third-party insurance is mandatory for ALL vehicles in India under the Motor Vehicles Act. Comprehensive insurance is optional but recommended. You can buy insurance online through IRDAI-registered insurers.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ004",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for jumping a red light?",
+      "description": "Jumping a red light is classified as 'Dangerous Driving' under Section 184 of the MV Act 2019. Fine: First offence - \u20b91,000 to \u20b95,000 and/or imprisonment up to 6 months. Second offence - \u20b910,000 and/or imprisonment up to 2 years. In Delhi specifically, the fine is \u20b95,000 for signal jumping. The offence is non-compoundable and will be recorded against your licence.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ005",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for using a mobile phone while driving?",
+      "description": "Under Section 194F of the MV Amendment Act 2019: First offence - \u20b91,000 to \u20b95,000. Second offence - \u20b910,000. Using a hand-held mobile phone while driving is considered distracted driving. This includes texting, calling, or any other use of the phone while the vehicle is in motion. In Delhi, the fine is fixed at \u20b95,000 for mobile phone use while driving.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ006",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What are the documents I must carry while driving?",
+      "description": "You must carry these documents while driving any motor vehicle in India: 1. Driving Licence (DL) - valid and appropriate for the vehicle class. 2. Registration Certificate (RC) - proving vehicle ownership and registration. 3. Insurance Certificate - valid third-party or comprehensive insurance. 4. PUC Certificate (Pollution Under Control) - valid emission certificate. 5. Permit (for commercial vehicles). Digital copies in DigiLocker are legally valid under Section 139 of the IT Act. Failure to produce documents when demanded by police under Section 206 carries a fine of \u20b9500.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ007",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "Can I use DigiLocker documents during traffic checking?",
+      "description": "Yes. As per a 2018 Government of India circular and the Information Technology Act 2000, digital documents stored in DigiLocker are legally equivalent to physical originals. The Parivahan Sewa (parivahan.gov.in) also provides mParivahan app for digital documents. Police officers are required to accept digital documents. However, if there is a dispute, physical documents are advisable to carry as backup. DigiLocker can be accessed at digilocker.gov.in or via the DigiLocker app.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ008",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for overspeeding in a school zone?",
+      "description": "In a school zone (typically within 500m of a school), the speed limit is 25 kmph. Any speeding in such zones is treated with higher severity. The base fine under Section 183 for a car (LMV) is \u20b91,000\u2013\u20b92,000. In school zones, courts can apply higher penalties as the offence endangers children. Some states like Karnataka apply a 2x multiplier in school zones. Additionally, dangerous driving near schools may be charged under Section 184 (Dangerous Driving) with fines up to \u20b95,000.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ009",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the speed limit in Indian cities?",
+      "description": "As per MoRTH notification, general speed limits in India are: Urban/City roads: 50 kmph for cars, 50 kmph for two-wheelers. State Highways: 80 kmph for cars, 60 kmph for two-wheelers, 60 kmph for HGVs. National Highways: 100 kmph for cars, 80 kmph for two-wheelers, 80 kmph for HGVs. Expressways: 120 kmph for cars, two-wheelers NOT allowed, 80 kmph for HGVs. School/Hospital zones: 25 kmph. These are maximum limits - lower limits posted on signs take precedence.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ010",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for driving without a valid RC (Registration Certificate)?",
+      "description": "Under Section 192 of the MV Amendment Act 2019: First offence - Fine of \u20b92,000\u2013\u20b95,000 and/or imprisonment up to 6 months. Subsequent offences - Fine up to \u20b910,000. The Registration Certificate (RC) must be valid and match the vehicle. RC must be renewed on expiry (typically every 15 years for new vehicles). Expired RC is treated the same as no RC. In Tamil Nadu and Delhi, the fine for no RC or expired RC is \u20b95,000.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ011",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for not wearing a seatbelt?",
+      "description": "Under Section 194B of the MV Amendment Act 2019, the fine for not wearing a seatbelt is \u20b91,000. This applies to: The driver, all front-seat passengers, and all rear-seat passengers. Child restraint systems (car seats) are mandatory for children under 14 years. In Maharashtra, the fine has been reduced to \u20b9500. Habitual offenders may face enhanced penalties.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ012",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for underage driving in India?",
+      "description": "Under Section 199 of the MV Amendment Act 2019, for underage/juvenile driving: The guardian or vehicle owner (not the juvenile) is held liable. Fine: \u20b925,000. Imprisonment: Up to 3 years for the guardian. The vehicle's registration certificate will be cancelled. The juvenile will be tried under the Juvenile Justice Act 2015. The minimum legal driving age in India is 18 years for all motorised vehicles, and 16 years for gearless two-wheelers up to 50cc with parental consent.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ013",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "How do I pay a traffic challan online?",
+      "description": "You can pay traffic challans online through: 1. Official eChallan portal: echallan.parivahan.gov.in - enter vehicle number, challan number, or DL number. 2. Parivahan App (mParivahan) - available on Android and iOS. 3. State-specific portals (e.g., Delhi: delhitrafficpolice.nic.in). Payment methods accepted: UPI, debit/credit cards, net banking, digital wallets (Paytm, GPay, PhonePe). On-spot payment: Through handheld POS machines carried by traffic police.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ014",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the PUC certificate and what is the fine for not having it?",
+      "description": "PUC stands for Pollution Under Control certificate. It is a certificate proving your vehicle's emissions are within permissible limits. Validity: 6 months for petrol/diesel vehicles, 1 year for CNG vehicles. Electric vehicles do not require PUC. Fine for no PUC: Under Section 190(2), the fine is \u20b910,000 and/or imprisonment up to 6 months for first offence. PUC can be obtained at any authorized PUC checking center (petrol stations, RTO-authorized centers). Cost is nominal (\u20b960-\u20b9100).",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ015",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What are the rules for overloading a vehicle?",
+      "description": "Under Section 194 of the MV Amendment Act 2019, overloading penalties are very steep: Base fine: \u20b920,000 for overloading a goods vehicle. Additional: \u20b92,000 for every extra tonne beyond permitted limit. The driver's licence can be disqualified, and the vehicle's fitness certificate can be cancelled. For passenger overloading (Section 194A): \u20b91,000 per extra passenger. The permitted load is specified in the vehicle's registration certificate (RC). Road transport authorities can also seize the vehicle.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ016",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "Is triple riding on a two-wheeler allowed?",
+      "description": "No. Triple riding (more than 2 persons on a two-wheeler) is prohibited across India. The maximum permitted is: 1 rider + 1 pillion passenger (2 persons total). Children below a certain age (varies by state, typically below 12 years or below 9 years) may be allowed additionally on the fuel tank area in some states. Fine for triple riding: Treated as violation of Section 128 (safety rules for motorcycles) and Section 194C, with a fine of \u20b91,000. In some states, triple riding is specifically penalized under local transport rules.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ017",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the difference between compoundable and non-compoundable traffic offences?",
+      "description": "Compoundable offences: Can be settled on the spot by paying the fine to the traffic police officer or via online payment. No court appearance needed. Examples: No helmet, no seatbelt, over-speeding (first time), no documents. Non-compoundable offences: Must go to court. Cannot be settled on the spot. Requires a court appearance. Examples: Drunk driving, dangerous driving, racing, underage driving, driving with cancelled licence. Under Section 200 of the MV Act, specific sections are listed as compoundable. For non-compoundable offences, a court date is given and the magistrate decides the final fine/punishment.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ018",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the rule about not giving way to an ambulance?",
+      "description": "Under Section 194E of the MV Amendment Act 2019, failing to give way to emergency vehicles (ambulance, fire service vehicle, police vehicle) carries: Fine of \u20b910,000 and/or imprisonment up to 6 months. All vehicles must immediately move to the side of the road and stop to allow emergency vehicles to pass. Blocking an ambulance can directly cost lives and is treated very seriously. The Supreme Court of India has also mandated strict enforcement of this rule. Courts have the discretion to enhance penalties in cases where delay contributed to loss of life.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ019",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "Can I contest a wrongful traffic challan?",
+      "description": "Yes. If you believe a challan was wrongly issued: 1. Gather evidence: Photos, CCTV footage, witness statements, dashcam footage. 2. Online complaint: Visit the state traffic police website or echallan.parivahan.gov.in and file a complaint. 3. Court appeal: Appear on the court date mentioned in the challan and present your case. You have the right to contest any challan in a court of law. The magistrate will review the evidence and decide. If the court finds the challan was wrongfully issued, it will be dismissed and no fine collected.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ020",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What happens if I don't pay a traffic challan?",
+      "description": "If you fail to pay a traffic challan: 1. A court summons will be issued (typically after 60 days). 2. Additional penalties may accumulate. 3. Your vehicle's RC renewal or transfer may be blocked. 4. Your DL renewal may be blocked. 5. In serious cases, a warrant may be issued. 6. The challan may be upgraded to a 'court challan' with higher fines. It is always advisable to pay challans promptly or contest them legally within the given time frame.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    }
+  ]
+}

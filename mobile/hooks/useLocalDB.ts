@@ -1,0 +1,244 @@
+import * as SQLite from 'expo-sqlite';
+import { useEffect, useState } from 'react';
+import { Platform } from 'react-native';
+
+const db = Platform.OS !== 'web' ? (SQLite as any).openDatabase?.('drivelegal.db') : null;
+
+export interface Fine {
+  id: number;
+  offence_code: string;
+  vehicle_class: string;
+  state: string;
+  amount_inr: number;
+  repeat_amount_inr?: number;
+  section_ref?: string;
+  source_url: string;
+  fetched_at: string;
+}
+
+export interface Rule {
+  rule_id: string;
+  section?: string;
+  title: string;
+  description: string;
+  state: string;
+  raw_json: string;
+}
+
+export interface Zone {
+  zone_id: string;
+  zone_type: string;
+  state: string;
+  rule_set_id?: string;
+  geometry_json: string;
+  fine_multiplier: number;
+}
+
+type Position = [number, number];
+type Polygon = Position[][];
+type MultiPolygon = Polygon[];
+
+const isPointInRing = (lat: number, lon: number, ring: Position[]) => {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i][0];
+    const yi = ring[i][1];
+    const xj = ring[j][0];
+    const yj = ring[j][1];
+    const intersects = yi > lat !== yj > lat && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi;
+    if (intersects) inside = !inside;
+  }
+  return inside;
+};
+
+const isPointInPolygon = (lat: number, lon: number, polygon: Polygon) => {
+  if (!polygon.length || !isPointInRing(lat, lon, polygon[0])) {
+    return false;
+  }
+  return !polygon.slice(1).some((hole) => isPointInRing(lat, lon, hole));
+};
+
+const isPointInGeoJson = (lat: number, lon: number, geojson: any) => {
+  const geometry = geojson?.type === 'Feature' ? geojson.geometry : geojson;
+  if (!geometry) return false;
+
+  if (geometry.type === 'Polygon') {
+    return isPointInPolygon(lat, lon, geometry.coordinates as Polygon);
+  }
+  if (geometry.type === 'MultiPolygon') {
+    return (geometry.coordinates as MultiPolygon).some((polygon) => isPointInPolygon(lat, lon, polygon));
+  }
+  return false;
+};
+
+const SCHEMA = `
+CREATE TABLE IF NOT EXISTS fines (
+  id INTEGER PRIMARY KEY,
+  offence_code TEXT NOT NULL,
+  vehicle_class TEXT NOT NULL,
+  state TEXT NOT NULL,
+  amount_inr INTEGER NOT NULL,
+  repeat_amount_inr INTEGER,
+  section_ref TEXT,
+  source_url TEXT NOT NULL,
+  fetched_at TEXT NOT NULL,
+  version_hash TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS rules (
+  rule_id TEXT PRIMARY KEY,
+  section TEXT,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL,
+  state TEXT NOT NULL DEFAULT 'ALL',
+  raw_json TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS zones (
+  zone_id TEXT PRIMARY KEY,
+  zone_type TEXT NOT NULL,
+  state TEXT NOT NULL,
+  rule_set_id TEXT,
+  geometry_json TEXT NOT NULL,
+  fine_multiplier REAL DEFAULT 1.0
+);
+
+CREATE TABLE IF NOT EXISTS sync_log (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  synced_at TEXT NOT NULL,
+  module TEXT NOT NULL,
+  rows_updated INTEGER DEFAULT 0,
+  status TEXT NOT NULL,
+  error TEXT
+);
+`;
+
+export const useLocalDB = () => {
+  const [initialized, setInitialized] = useState(false);
+
+  useEffect(() => {
+    const init = async () => {
+      try {
+        if (!db) {
+          setInitialized(true);
+          return;
+        }
+        await new Promise<void>((resolve, reject) => {
+          db.transaction((tx: any) => {
+            // Split schema by ; and run each statement
+            SCHEMA.split(';').forEach(stmt => {
+              if (stmt.trim()) {
+                tx.executeSql(stmt, [], () => {}, (_: any, err: any) => {
+                  console.error('Schema error:', err);
+                  return false;
+                });
+              }
+            });
+          }, reject, resolve);
+        });
+        setInitialized(true);
+      } catch (e) {
+        console.error('Failed to initialize local DB', e);
+      }
+    };
+    init();
+  }, []);
+
+  const queryFine = async (offence: string, vehicleClass: string, state: string): Promise<Fine | null> => {
+    try {
+      if (!db) return null;
+      return await new Promise((resolve) => {
+        db.transaction((tx: any) => {
+          tx.executeSql(
+            `SELECT * FROM fines 
+             WHERE offence_code = ? AND vehicle_class = ? AND (state = ? OR state = 'ALL')
+             ORDER BY CASE WHEN state = ? THEN 0 ELSE 1 END
+             LIMIT 1`,
+            [offence, vehicleClass, state, state],
+            (_: any, { rows }: any) => {
+              if (rows.length > 0) {
+                resolve(rows.item(0) as Fine);
+              } else {
+                resolve(null);
+              }
+            },
+            (_: any, err: any) => {
+              console.error('Query fine error:', err);
+              resolve(null);
+              return false;
+            }
+          );
+        });
+      });
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const queryRule = async (ruleId: string): Promise<Rule | null> => {
+    try {
+      if (!db) return null;
+      return await new Promise((resolve) => {
+        db.transaction((tx: any) => {
+          tx.executeSql(
+            'SELECT * FROM rules WHERE rule_id = ?',
+            [ruleId],
+            (_: any, { rows }: any) => {
+              if (rows.length > 0) {
+                resolve(rows.item(0) as Rule);
+              } else {
+                resolve(null);
+              }
+            },
+            (_: any, err: any) => {
+              console.error('Query rule error:', err);
+              resolve(null);
+              return false;
+            }
+          );
+        });
+      });
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const getZonesForPoint = async (lat: number, lon: number): Promise<Zone[]> => {
+    try {
+      if (!db) return [];
+      const allZones: Zone[] = await new Promise((resolve) => {
+        db.transaction((tx: any) => {
+          tx.executeSql(
+            'SELECT * FROM zones',
+            [],
+            (_: any, { rows }: any) => {
+              const res: Zone[] = [];
+              for (let i = 0; i < rows.length; i++) {
+                res.push(rows.item(i) as Zone);
+              }
+              resolve(res);
+            },
+            (_: any, err: any) => {
+              console.error('Get zones error:', err);
+              resolve([]);
+              return false;
+            }
+          );
+        });
+      });
+
+      return allZones.filter(z => {
+        try {
+          const geojson = JSON.parse(z.geometry_json);
+          return isPointInGeoJson(lat, lon, geojson);
+        } catch {
+          return false;
+        }
+      });
+    } catch (e) {
+      return [];
+    }
+  };
+
+  return { queryFine, queryRule, getZonesForPoint, initialized };
+};

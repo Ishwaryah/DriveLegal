@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "DriveLegal",
+    "slug": "drivelegal-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "usesCleartextTraffic": true,
+      "package": "com.sripathirajan.drivelegalmobile",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDTfY-7KE8S7fhS2CaxXK0-QZFRWuWCZnc"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow DriveLegal to use your location for traffic rules and zone detection."
+        }
+      ]
+    ],
+    "scheme": "drivelegal"
+  }
+}

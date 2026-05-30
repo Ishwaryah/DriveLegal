@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+spacy
+shapely
+playwright
+google-genai
+openai
+python-dotenv
+pydantic
+chromadb
+rank-bm25
+ollama
