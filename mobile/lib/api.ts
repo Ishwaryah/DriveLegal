@@ -11,7 +11,7 @@ const API_PORT = process.env.EXPO_PUBLIC_API_PORT ?? '8000';
  * - Default → 127.0.0.1 (web on PC)
  */
 export function getApiBaseUrl(): string {
-  const envUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
+  const envUrl = "https://drivelegal-lhae.onrender.com";
   if (envUrl) {
     return envUrl;
   }
