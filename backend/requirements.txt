@@ -10,3 +10,4 @@ pydantic
 chromadb
 rank-bm25
 ollama
+fpdf
